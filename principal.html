@@ -10,74 +10,94 @@ var contador = 0;
 function inicializar(){
     
     let i;
+    var valorfuncion =0;
     var cartasvalores;
     window.cartasvalores = "global";
      cartasvalores = new Array(largo + 1);
-    for (i = 1; i <= largo; i++){
+
+
+
+
+
+    for (i = 1; i <= largo; i++)
         cartasvalores[i] = Math.floor((Math.random() * 100)) - 50;    
-    }
+
     return cartasvalores;
 }
 cartasvalores = inicializar();
 </script>
 
+<style type="text/css">.number{
+    font-size: 500%
+}</style>
+
 <div class="container-fluid">
-    <div class="row d-flex justify-content-center my-3"><h1 class="display-4" id="scoretext">Your score is 0</h1></div> 
-    <div class="row d-flex justify-content-center my-3"><h1 class="display-4" id="contadortext">You have 10 options left</h1></div> 
+    <div class="row d-flex my-3">
+        <div class="col ml-3 my-3"><h1 class="display-4" id="scoretext">Score 0</h1></div>
+        <div class="col text-right my-3"><h1 class="display-4" id="contadortext">Attempts 10</h1></div>
+    </div>
+         
+     
 
-    <div class="row mx-5">
-        <div class="col d-flex justify-content-center ml-3 my-2"><button  class="btn btn-light" onClick="draw('carta1',1);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta1"></p></button></div>
-        <div class="col d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta2',2);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta2"></p></button></div>
-        <div class="col d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta3',3);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta3"></p></button></div>
-        <div class="col d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta4',4);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta4"></p></button></div>
-        <div class="col d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta5',5);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta5"></p></button></div>
-        <div class="col d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta6',6);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta6"></p></button></div>
-        <div class="col d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta7',7);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta7"></p></button></div>
+    <div class="row d-flex justify-content-center mx-5">
+        <div class="col-auto d-flex justify-content-center ml-3 my-3"><button  class="btn btn-light" onClick="draw('carta1',1);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta1"></p></button></div>
+        <div class="col-auto d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta2',2);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta2"></p></button></div>
+        <div class="col-auto d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta3',3);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta3"></p></button></div>
+        <div class="col-auto d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta4',4);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta4"></p></button></div>
+        <div class="col-auto d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta5',5);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta5"></p></button></div>
+        <div class="col-auto d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta6',6);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta6"></p></button></div>
+        <div class="col-auto d-flex justify-content-center my-3"><button class="btn btn-light" onClick="draw('carta7',7);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta7"></p></button></div>
     </div>
 
-    <div class="row mx-5">
-        <div class="col d-flex justify-content-center ml-3 mb-3"><button class="btn btn-light" onClick="draw('carta8',8);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta8"></p></button></div>
-        <div class="col d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta9',9);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta9"></p></button></div>
-        <div class="col d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta10',10);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta10"></p></button></div>
-        <div class="col d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta11',11);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta11"></p></button></div>
-        <div class="col d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta12',12);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta12"></p></button></div>
-        <div class="col d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta13',13);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta13"></p></button></div>
-        <div class="col d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta14',14);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta14"></p></button></div>
+    <div class="row d-flex justify-content-center mx-5">
+        <div class="col-auto d-flex justify-content-center ml-3 mb-3"><button class="btn btn-light" onClick="draw('carta8',8);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta8"></p></button></div>
+        <div class="col-auto d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta9',9);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta9"></p></button></div>
+        <div class="col-auto d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta10',10);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta10"></p></button></div>
+        <div class="col-auto d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta11',11);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta11"></p></button></div>
+        <div class="col-auto d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta12',12);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta12"></p></button></div>
+        <div class="col-auto d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta13',13);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta13"></p></button></div>
+        <div class="col-auto d-flex justify-content-center mb-3"><button class="btn btn-light" onClick="draw('carta14',14);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta14"></p></button></div>
     </div>
 
 
-    <div class="row mx-5">
-        <div class="col d-flex justify-content-center ml-3"><button class="btn btn-light" onClick="draw('carta15',15);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta15"></p></button></div>
-        <div class="col d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta16',16);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta16"></p></button></div>
-        <div class="col d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta17',17);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta17"></p></button></div>
-        <div class="col d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta18',18);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta18"></p></button></div>
-        <div class="col d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta19',19);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta19"></p></button></div>
-        <div class="col d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta20',20);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta20"></p></button></div>
-        <div class="col d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta21',21);" style="border:1px solid #000000; width:100px; height:100px;"><p id="carta21"></p></button></div>
+    <div class="row d-flex justify-content-center mx-5">
+        <div class="col-auto d-flex justify-content-center ml-3"><button class="btn btn-light" onClick="draw('carta15',15);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta15"></p></button></div>
+        <div class="col-auto d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta16',16);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta16"></p></button></div>
+        <div class="col-auto d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta17',17);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta17"></p></button></div>
+        <div class="col-auto d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta18',18);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta18"></p></button></div>
+        <div class="col-auto d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta19',19);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta19"></p></button></div>
+        <div class="col-auto d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta20',20);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta20"></p></button></div>
+        <div class="col-auto d-flex justify-content-center"><button class="btn btn-light" onClick="draw('carta21',21);" style="border:1px solid #000000; width:150px; height:150px;"><p class="number" id="carta21"></p></button></div>
     </div>
-
-    <div class="row d-flex justify-content-center my-3"><button type="button" class="btn btn-primary mt-3 ml-3" onClick="desordenar(cartasvalores)" style="width: 20%">Rearrange numbers</button> </div>
-        <div class="row d-flex justify-content-center my-3"><button type="button" class="btn btn-primary mt-3 ml-3" onClick="resetear()" style="width: 20%">Reset game</button> </div>
-
-
-    <div class="row mx-5"><p class="lead"><b>Instructions: Your score is the sum of the numbers of the buttons you touch, you have 10 attempts to get the highest score possible (you can touch the same button multiple times!)</b></p></div>
 </div>
+        <div class="row mt-5 d-flex justify-content-center">
 
+             <h3><b>Instructions: Your score is the sum of the numbers of the buttons you touch, you have 10 attempts<br> to get the highest score possible (you can touch the same button multiple times!)</b></h3>
+        </div>
+        <div class="row d-flex justify-content-center">
+        <div class="col-3 d-flex justify-content-center my-3"><button type="button" class="btn btn-primary mt-3 ml-3" onClick="desordenar(cartasvalores)" style="width: 50%">Rearrange numbers</button> </div>
+        <div class="col-3 d-flex justify-content-center my-3"><button type="button" class="btn btn-primary mt-3 ml-3" onClick="resetear()" style="width: 50%">Reset game</button> </div>
+        </div>
+
+       
+    </div>
+    
 </body>
     
   <script type="application/javascript">
     function draw(ids,numerocarta) {
         if (contador < 10)
         { 
-        document.getElementById(ids).innerHTML = cartasvalores[numerocarta];
-        suma = suma + cartasvalores[numerocarta];
-        
-        document.getElementById("scoretext").innerHTML = "Your score is " + suma ;
+            document.getElementById(ids).innerHTML = cartasvalores[numerocarta];
+            suma = suma + cartasvalores[numerocarta];
+            
+            document.getElementById("scoretext").innerHTML = "Score " + suma ;
         }
+        
         contador++;
         var restantes = 10 - contador; 
         if (restantes >= 0)
-            document.getElementById("contadortext").innerHTML = "Your have " + restantes + " options left" ;
+            document.getElementById("contadortext").innerHTML = "Attempts " + restantes;
 
 
         if (contador === 10){
@@ -101,25 +121,28 @@ cartasvalores = inicializar();
         }
         contador = 0;
         suma = 0;
-        document.getElementById("contadortext").innerHTML = "You have 10 options left";
-        document.getElementById("scoretext").innerHTML = "Your score is " + suma;
+
+
+        document.getElementById("contadortext").innerHTML = "Attempts 10";
+        document.getElementById("scoretext").innerHTML = "Score 0"  ;
         return 0;
     }
 
     function resetear()
     {
         let i;
-        for ( i = 1; i <= largo; i++){
+        for ( i = 1; i <= largo; i++)
             cartasvalores[i] = Math.floor((Math.random() * 100)) - 50;
-        }
         
          for (i =1; i<= largo; i++)
             document.getElementById("carta"+i).innerHTML = "";
 
         suma= 0;
         contador = 0;
-        document.getElementById("scoretext").innerHTML = "Your score is 0"  ;
-        document.getElementById("contadortext").innerHTML = "You have 10 options left";
+
+
+        document.getElementById("contadortext").innerHTML = "Attempts 10";
+        document.getElementById("scoretext").innerHTML = "Score 0"  ;
 
 
 
